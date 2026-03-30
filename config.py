@@ -10,6 +10,11 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "8603411643:AAG4WVEpibqoD4QqvLfKKIOCUvOf
 # Твой Telegram ID (узнай у @userinfobot)
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "7564112818"))
 
+import os
+
+CRYPTOBOT_API_KEY = os.environ.get("559904:AAz43Da1Rty1m7AdVud8QHjzwFaxhGUG2iG")
+CRYPTOBOT_APP_ID = os.environ.get("Porcine Skua App")
+
 # Название и эмодзи токена
 TOKEN_EMOJI = "💎"
 TOKEN_NAME = "Gems"
