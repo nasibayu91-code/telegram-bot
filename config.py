@@ -5,10 +5,10 @@ import os
 # ==============================
 
 # Токен бота (получи у @BotFather)
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8603411643:AAG4WVEpibqoD4QqvLfKKIOCUvOf21d3klc")
 
 # Твой Telegram ID (узнай у @userinfobot)
-ADMIN_ID = int(os.environ.get("ADMIN_ID", "123456789"))
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "7564112818"))
 
 # Название и эмодзи токена
 TOKEN_EMOJI = "💎"
