@@ -236,3 +236,16 @@ def reject_withdrawal(dep_id: int):
                 (dep["amount"], dep["user_id"])
             )
         return dep
+def get_all_users():
+    with get_conn() as conn:
+        return conn.execute("SELECT user_id FROM users").fetchall()
+
+def get_user_count():
+    with get_conn() as conn:
+        row = conn.execute("SELECT COUNT(*) as count FROM users").fetchone()
+        return row["count"]
+
+def get_total_balance():
+    with get_conn() as conn:
+        row = conn.execute("SELECT SUM(balance) as total FROM users").fetchone()
+        return row["total"] or 0
