@@ -955,7 +955,7 @@ def main():
         start_webhook()
         logger.info("CryptoBot webhook запущен")
 
-    updater = Updater(token=config.BOT_TOKEN, use_context=True)
+    updater = Updater(token=config.8603411643:AAEFOuhoBvnmh90h4MK9PsqQnot5uQGkmTY, use_context=True)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("start", cmd_start))
