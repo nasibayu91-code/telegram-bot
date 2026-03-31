@@ -3,7 +3,7 @@ VIP Casino Bot — главный файл
 Игры: Орёл/Решка, Кости, Дартс, Баскетбол, Футбол, Мины, Башня
 Платежи: Telegram Stars, USD (вручную)
 """
-
+import cryptobot
 import asyncio
 import logging
 import random
@@ -863,17 +863,17 @@ async def _deposit(q, context, parts):
             )
 
     elif method == "usd":
-        context.user_data["state"] = "deposit_usd"
-        await q.edit_message_text(
-            "💵 *Пополнение через USD*\n\n"
-            f"Курс: 1 USD = {config.USD_TO_TOKENS} {config.TOKEN_EMOJI}\n\n"
-            "Напиши сумму в USD (например: `5`).\n"
-            "После этого получишь реквизиты для оплаты.",
-            parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("❌ Отмена", callback_data="m:deposit")]
-            ])
-        )
+    await q.edit_message_text(
+        "💵 *Пополнение через CryptoBot*\n\n"
+        "Выберите криптовалюту:",
+        parse_mode="Markdown",
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("💎 USDT (TRC-20)", callback_data="crypto:usdt")],
+            [InlineKeyboardButton("₿ Bitcoin", callback_data="crypto:btc")],
+            [InlineKeyboardButton("🔘 TON", callback_data="crypto:ton")],
+            [InlineKeyboardButton("🔙 Назад", callback_data="m:deposit")]
+        ])
+    )
 
 
 # ─── Stars Pre-checkout & Successful Payment ─────────────────────────────────
@@ -1216,3 +1216,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+updater.start_polling()
+# Запускаем webhook для CryptoBot
+cryptobot.start_webhook()
