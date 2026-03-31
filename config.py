@@ -4,12 +4,12 @@ import os
 # НАСТРОЙКИ КАЗИНО БОТА
 # ==============================
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-ADMIN_ID = int(os.environ.get("ADMIN_ID", "123456789"))
+BOT_TOKEN = os.environ.get("8603411643:AAG4WVEpibqoD4QqvLfKKIOCUvOf21d3klc")
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "7564112818"))
 
 # CryptoBot
-CRYPTOBOT_API_KEY = os.environ.get("CRYPTOBOT_API_KEY")
-CRYPTOBOT_APP_ID = os.environ.get("CRYPTOBOT_APP_ID")
+CRYPTOBOT_API_KEY = os.environ.get("559904:AAz43Da1Rty1m7AdVud8QHjzwFaxhGUG2iG")
+CRYPTOBOT_APP_ID = os.environ.get("Porcine Skua App")
 
 TOKEN_EMOJI = "💎"
 TOKEN_NAME = "Gems"
