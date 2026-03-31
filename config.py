@@ -5,7 +5,9 @@ import os
 # ==============================
 
 BOT_TOKEN = os.environ.get("8603411643:AAG4WVEpibqoD4QqvLfKKIOCUvOf21d3klc")
-ADMIN_ID = int(os.environ.get("7564112818")
+
+# ADMIN_ID: берем из переменной, если нет - используем 7564112818
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "7564112818"))
 
 # CryptoBot
 CRYPTOBOT_API_KEY = os.environ.get("559904:AAz43Da1Rty1m7AdVud8QHjzwFaxhGUG2iG")
