@@ -4,7 +4,7 @@ import os
 # НАСТРОЙКИ КАЗИНО БОТА
 # ==============================
 
-BOT_TOKEN = os.environ.get("8603411643:AAG4WVEpibqoD4QqvLfKKIOCUvOf21d3klc")
+BOT_TOKEN = os.environ.get("8603411643:AAEFOuhoBvnmh90h4MK9PsqQnot5uQGkmTY")
 
 # ADMIN_ID: берем из переменной, если нет - используем 7564112818
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "7564112818"))
